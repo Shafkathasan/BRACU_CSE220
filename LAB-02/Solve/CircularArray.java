@@ -1,3 +1,6 @@
+//Name: Shafkat Hasan
+//ID: 19101077
+//Lab 01 : Liner Array
 package Lab02;
 
 public class CircularArray {

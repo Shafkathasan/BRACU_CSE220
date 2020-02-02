@@ -143,17 +143,38 @@ public class CircularArray {
 
     //This method will check whether the array is palindrome or not
     public void palindromeCheck() {
-        //TO DO
+        int s = start, l = (start + size - 1) % cir.length;
+        int check = 0;
+        for (int i = 0; i < size / 2; i++) {
+            if (cir[s] == cir[l]) {
+                check = 0;
+            } else {
+                check = 1;
+            }
+            s++;
+            l--;
+            if (s > cir.length) {
+                s = (start + size) % cir.length;
+            }
+            if (l < 0) {
+                l = cir.length - 1;
+            }
+        }
+        if (check == 0) {
+            System.out.println("This array is a palindrome");
+        } else {
+            System.out.println("This array is NOT a palindrome");
+        }
     }
 
     //This method will sort the values by keeping the start unchanged
     public void sort() {
-        for(int i=0; i<size; i++) {
-            for(int j=i+1; j<size; j++) {
-                if((int)cir[(j+start)%cir.length]<(int)cir[(i+start)%cir.length]) {
-                    Object T = cir[(i+start)%cir.length];
-                    cir[(i+start)%cir.length] = cir[(j+start)%cir.length];
-                    cir[(j+start)%cir.length] = T;
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if ((int) cir[(j + start) % cir.length] < (int) cir[(i + start) % cir.length]) {
+                    Object T = cir[(i + start) % cir.length];
+                    cir[(i + start) % cir.length] = cir[(j + start) % cir.length];
+                    cir[(j + start) % cir.length] = T;
                 }
             }
         }
@@ -161,7 +182,20 @@ public class CircularArray {
 
     //This method will check the given array across the base array and if they are equivalent interms of values return true, or else return false
     public boolean equivalent(CircularArray k) {
-        //TO DO
-        return false; // Remove this line
+        boolean check = false;
+        int s1 = start;
+        int s2 = k.start;
+        for (int i = 0; i < size; i++) {
+            if (cir[s1] == k.cir[s2]) {
+                check = true;
+            } else {
+                check = false;
+                break;
+            }
+            s1 = (s1 + 1) % cir.length;
+            s2 = (s2 + 1) % k.cir.length;
+        }
+
+        return check;
     }
 }

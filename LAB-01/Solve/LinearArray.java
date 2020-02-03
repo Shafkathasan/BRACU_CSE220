@@ -128,7 +128,7 @@ public class LinearArray {
             source[i] = source[i + k];
             source[i + k] = 0;
         }
-        return source; // remove this line    
+        return source;   
     }
 
     // Shifts all the elements of the source array to the right by 'k' positions
@@ -138,7 +138,7 @@ public class LinearArray {
             source[i + k] = source[i];
             source[i] = 0;
         }
-        return source; // remove this line    
+        return source;    
     }
 
     // Rotates all the elements of the source array to the left by 'k' positions
@@ -149,7 +149,7 @@ public class LinearArray {
             source[i] = source[source.length - i - 1];
             source[source.length - i - 1] = T;
         }
-        return source; // remove this line     
+        return source;   
     }
 
     // Rotates all the elements of the source array to the right by 'k' positions

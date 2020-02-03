@@ -1,6 +1,6 @@
 //Name: Shafkat Hasan
 //ID: 19101077
-//Lab 01 : Liner Array
+//Lab 02 : Circular Array
 package Lab02;
 
 public class CircularArray {
@@ -10,9 +10,9 @@ public class CircularArray {
     private Object[] cir;
 
     /*
-   * if Object [] lin = {10, 20, 30, 40, null}
-   * then, CircularArray(lin, 2, 4) will generate
-   * Object [] cir = {40, null, 10, 20, 30}
+     * if Object [] lin = {10, 20, 30, 40, null}
+     * then, CircularArray(lin, 2, 4) will generate
+     * Object [] cir = {40, null, 10, 20, 30}
      */
     public CircularArray(Object[] lin, int st, int sz) {
         start = st;
@@ -21,7 +21,6 @@ public class CircularArray {
         for (int i = 0; i < size; i++) {
             cir[(start + i) % lin.length] = lin[i];
         }
-
     }
 
     //Prints from index --> 0 to cir.length-1
@@ -58,7 +57,7 @@ public class CircularArray {
         System.out.println();
     }
 
-// With no null cells
+    // With no null cells
     public void linearize() {
         Object[] T = new Object[size];
         for (int i = 0; i < size; i++) {
@@ -92,6 +91,7 @@ public class CircularArray {
      * use resizeStartUnchanged() for resizing.
      */
     public void insertByRightShift(Object elem, int pos) {
+        
         if (size >= cir.length) {
             resizeStartUnchanged(size + 3);
         }
@@ -117,7 +117,7 @@ public class CircularArray {
     }
 
     /* parameter--> pos. pos --> position relative to start.
-   * Valid range of pos--> 0 to size-1
+     * Valid range of pos--> 0 to size-1
      */
     public void removeByLeftShift(int pos) {
         int index = (start + pos) % cir.length;
@@ -131,7 +131,7 @@ public class CircularArray {
     }
 
     /* parameter--> pos. pos --> position relative to start.
-   * Valid range of pos--> 0 to size-1
+     * Valid range of pos--> 0 to size-1
      */
     public void removeByRightShift(int pos) {
         int index = (start + pos) % cir.length;
@@ -189,16 +189,12 @@ public class CircularArray {
         int s1 = start;
         int s2 = k.start;
         for (int i = 0; i < size; i++) {
-            if (cir[s1] == k.cir[s2]) {
+            if (cir[(s1 + i) % cir.length] == k.cir[(s2 + i) % k.cir.length]) {
                 check = true;
             } else {
                 check = false;
-                break;
             }
-            s1 = (s1 + 1) % cir.length;
-            s2 = (s2 + 1) % k.cir.length;
         }
-
         return check;
     }
 }

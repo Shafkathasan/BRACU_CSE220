@@ -3,14 +3,21 @@
 //Lab 01 : Liner Array
 package Assignment_01;
 
-public class Task01 {
+public class Task02 {
 
     public static void main(String[] args) {
         int x = (1077 % 33) + (1077 % 34);
-        int[] a = {x - 18, x + 4, x, x + 14, x - 5, x + 4, x - 2, x + 9};
+        int y = (077 % 33) + (077 % 34);
+        Object A = (x + 1) + "SAF" + (y + 10),
+                B = (x + 2) + "SAF" + (y + 20),
+                C = (x + 3) + "SAF" + (y + 30),
+                D = (x + 4) + "SAF" + (y + 40),
+                E = (x + 5) + "SAF" + (y + 50),
+                F = (x + 6) + "SAF" + (y + 60);
+        Object[] a = {x, A, B, C, D, E, F};
 
         System.out.println("\n///// TEST 01: Copy Array example /////");
-        int[] b = copyArray(a, a.length);
+        Object[] b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
 
 //        System.out.println("\n///// TEST 02: Print Reverse example /////");
@@ -84,7 +91,7 @@ public class Task01 {
     }
 
     // Prints the contents of the source array
-    public static void printArray(int[] source) {
+    public static void printArray(Object[] source) {
         for (int i = 0; i < source.length; i++) {
             if (i == source.length - 1) {
                 System.out.print(source[i] + "\n");
@@ -104,8 +111,8 @@ public class Task01 {
 //            }
 //        }
 //    }
-    public static int[] resizeArray(int[] source, int newcapacity) {
-        int[] T = new int[newcapacity];
+    public static Object[] resizeArray(Object[] source, int newcapacity) {
+        Object[] T = new Object[newcapacity];
         for (int i = 0; i < source.length; i++) {
             T[i] = source[i];
         }
@@ -113,8 +120,8 @@ public class Task01 {
     }
 
     // creates a copy of the source array and returns the reference of the newly created copy array
-    public static int[] copyArray(int[] source, int len) {
-        int[] c = new int[len];
+    public static Object[] copyArray(Object[] source, int len) {
+        Object[] c = new Object[len];
         for (int i = 0; i < c.length; i++) {
             c[i] = source[i];
         }
@@ -122,8 +129,9 @@ public class Task01 {
     }
 
     // creates a reversed copy of the source array and returns the reference of the newly created reversed array
-    public static void reverseArray(int[] source) {
-        int i, T;
+    public static void reverseArray(Object[] source) {
+        int i;
+        Object T;
         for (i = 0; i < source.length / 2; i++) {
             T = source[i];
             source[i] = source[source.length - 1 - i];
@@ -133,7 +141,7 @@ public class Task01 {
 
     // Shifts all the elements of the source array to the left by 'k' positions
     // Returns the updated array
-    public static int[] shiftLeft(int[] source, int k) {
+    public static Object[] shiftLeft(Object[] source, int k) {
         for (int i = 0; i + k < source.length; i++) {
             source[i] = source[i + k];
             source[i + k] = 0;
@@ -143,7 +151,7 @@ public class Task01 {
 
     // Shifts all the elements of the source array to the right by 'k' positions
     // Returns the updated array
-    public static int[] shiftRight(int[] source, int k) {
+    public static Object[] shiftRight(Object[] source, int k) {
         for (int i = 0; i < k; i++) {
             source[i + k] = source[i];
             source[i] = 0;
@@ -153,9 +161,9 @@ public class Task01 {
 
     // Rotates all the elements of the source array to the left by 'k' positions
     // Returns the updated array
-    public static int[] rotateLeft(int[] source, int k) {
+    public static Object[] rotateLeft(Object[] source, int k) {
         for (int i = 0; i + k < source.length; i++) {
-            int T = source[i];
+            Object T = source[i];
             source[i] = source[i + k];
             source[i + k] = T;
         }
@@ -164,9 +172,9 @@ public class Task01 {
 
     // Rotates all the elements of the source array to the right by 'k' positions
     // Returns the updated array
-    public static int[] rotateRight(int[] source, int k) {
+    public static Object[] rotateRight(Object[] source, int k) {
         for (int i = source.length - 1; i - k >= 0; i--) {
-            int T = source[i];
+            Object T = source[i];
             source[i] = source[i - k];
             source[i - k] = T;
         }
@@ -183,7 +191,7 @@ public class Task01 {
      * given index is invalid, print "Invalid Index" if insertion is successful,
      * print the 'Number of elements after insertion' is completed
      */
-    public static boolean insert(int[] arr, int size, int elem, int index) {
+    public static boolean insert(Object[] arr, int size, int elem, int index) {
         if (size <= arr.length) {
             for (int i = arr.length - 1; i > index; i--) {
                 arr[i] = arr[i - 1];
@@ -206,14 +214,14 @@ public class Task01 {
      * removal is successful; return fal se otherwise if removal is successful,
      * print the 'Number of elements after removal' is completed
      */
-    public static int[] removeAt(int[] arr, int index) {
+    public static Object[] removeAt(Object[] arr, int index) {
         if (arr == null
                 || index < 0
                 || index >= arr.length) {
 
             return arr;
         } else {
-            int[] anotherArray = new int[arr.length - 1]; 
+            Object[] anotherArray = new Object[arr.length - 1];
             for (int i = 0, k = 0; i < arr.length; i++) {
 
                 // if the index is 

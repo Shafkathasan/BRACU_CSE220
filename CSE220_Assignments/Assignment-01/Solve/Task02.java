@@ -19,14 +19,11 @@ public class Task02 {
         System.out.println("\n///// TEST 01: Copy Array example /////");
         Object[] b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-
-//        System.out.println("\n///// TEST 02: Print Reverse example /////");
-//        printArray(a); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-//        printReverse(a); // This Should Print: { 53, 42, 48, 39, 58, 44, 48, 26 } 
+        
         System.out.println("\n///// TEST 02: Resize Array example /////");
         b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-        b = resizeArray(b, 10);
+        b = resizeArray(b, (1077 % 5) + (077 % 3)+8);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53, 0, 0 }
 
         System.out.println("\n///// TEST 03: Reverse Array example /////");
@@ -38,32 +35,32 @@ public class Task02 {
         System.out.println("\n///// TEST 04: Shift Left k cell example /////");
         b = copyArray(a, a.length);
         printArray(b);
-        b = shiftLeft(b, 3);
+        b = shiftLeft(b, 1);
         printArray(b); // This Should Print: { 58, 39, 48, 42, 53, 0, 0, 0 } 
 
         System.out.println("\n///// TEST 05: Shift Right k cell example /////");
         b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-        b = shiftRight(b, 3);
+        b = shiftRight(b, 1);
         printArray(b);  // This Should Print: { 0, 0, 0, 26, 48, 44, 42, 53 } 
 
         System.out.println("\n///// TEST 06: Rotate Left k cell example /////");
         b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-        b = rotateLeft(b, 4);
+        b = rotateLeft(b, 077%5);
         printArray(b); // This Should Print: { 39, 48, 42, 53, 26, 48, 44, 58 } 
 
         System.out.println("\n///// TEST 07: Rotate Right k cell example /////");
         b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-        b = rotateRight(b, 4);
+        b = rotateRight(b, 077%5);
         printArray(b); // This Should Print: { 39, 48, 42, 53, 26, 48, 44, 58 } 
 
         System.out.println("\n///// TEST 08: Insert example 1 /////");
 
         b = copyArray(a, a.length);
         printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-        boolean bol = insert(b, 9, 70, 3); // This Should Print: No space Left 
+        boolean bol = insert(b, 9, 70, 077%7); // This Should Print: No space Left 
         System.out.println(bol); // This Should Print: false
         printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
 
@@ -74,17 +71,17 @@ public class Task02 {
         System.out.println(bol); // This Should Print: true
         printArray(b); // This Should Print: { 26, 48, 70, 44, 58, 39, 48, 42 } 
 
-        System.out.println("\n///// TEST 10: Insert example 3 /////");
-        b = copyArray(a, a.length);
-        printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }  
-        bol = insert(b, 6, 70, 6); // This Should Print: Number of elements after insertion: 7 
-        System.out.println(bol); // This Should Print: true
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 } 
-
         System.out.println("\n///// TEST 11: Remove example 1 /////");
         b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 } 
-        b = removeAt(b, 7);
+        b = removeAt(b, 077%10);
+        //System.out.println(bol); // This Should Print: false
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 } 
+        
+        System.out.println("\n///// TEST 12: Remove example 2 /////");
+        b = copyArray(a, a.length);
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 } 
+        b = removeAt(b, 077%9);
         //System.out.println(bol); // This Should Print: false
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 } 
 
@@ -101,16 +98,6 @@ public class Task02 {
         }
     }
 
-//    // Prints the contents of the source array in reverse order
-//    public static void printReverse(int[] source) {
-//        for (int i = source.length - 1; i >= 0; i--) {
-//            if (i == 0) {
-//                System.out.print(source[i] + "\n");
-//            } else {
-//                System.out.print(source[i] + ", ");
-//            }
-//        }
-//    }
     public static Object[] resizeArray(Object[] source, int newcapacity) {
         Object[] T = new Object[newcapacity];
         for (int i = 0; i < source.length; i++) {

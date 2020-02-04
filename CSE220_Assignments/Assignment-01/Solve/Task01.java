@@ -13,9 +13,6 @@ public class Task01 {
         int[] b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
 
-//        System.out.println("\n///// TEST 02: Print Reverse example /////");
-//        printArray(a); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-//        printReverse(a); // This Should Print: { 53, 42, 48, 39, 58, 44, 48, 26 } 
         System.out.println("\n///// TEST 02: Resize Array example /////");
         b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
@@ -93,17 +90,7 @@ public class Task01 {
             }
         }
     }
-
-//    // Prints the contents of the source array in reverse order
-//    public static void printReverse(int[] source) {
-//        for (int i = source.length - 1; i >= 0; i--) {
-//            if (i == 0) {
-//                System.out.print(source[i] + "\n");
-//            } else {
-//                System.out.print(source[i] + ", ");
-//            }
-//        }
-//    }
+    
     public static int[] resizeArray(int[] source, int newcapacity) {
         int[] T = new int[newcapacity];
         for (int i = 0; i < source.length; i++) {

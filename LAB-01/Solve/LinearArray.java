@@ -146,8 +146,8 @@ public class LinearArray {
     public static int[] rotateLeft(int[] source, int k) {
         for (int i = 0; i + k < source.length; i++) {
             int T = source[i];
-            source[i] = source[source.length - i - 1];
-            source[source.length - i - 1] = T;
+            source[i] = source[i + k];
+            source[i + k] = T;
         }
         return source;   
     }

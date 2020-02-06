@@ -1,6 +1,6 @@
 //Name: Shafkat Hasan
 //ID: 19101077
-//Lab 01 : Liner Array
+//Assignment-01 : Liner Array
 package Assignment_01;
 
 public class Task01 {
@@ -8,7 +8,8 @@ public class Task01 {
     public static void main(String[] args) {
         int x = (1077 % 33) + (1077 % 34);
         int[] a = {x - 18, x + 4, x, x + 14, x - 5, x + 4, x - 2, x + 9};
-
+        printArray(a);
+        
         System.out.println("\n///// TEST 01: Copy Array example /////");
         int[] b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 

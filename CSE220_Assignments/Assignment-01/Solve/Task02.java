@@ -1,6 +1,6 @@
 //Name: Shafkat Hasan
 //ID: 19101077
-//Lab 01 : Liner Array
+//Assignment-01 : Liner Array
 package Assignment_01;
 
 public class Task02 {
@@ -8,12 +8,12 @@ public class Task02 {
     public static void main(String[] args) {
         int x = (1077 % 33) + (1077 % 34);
         int y = (077 % 33) + (077 % 34);
-        Object A = (x + 1) + "SAF" + (y + 10),
-                B = (x + 2) + "SAF" + (y + 20),
-                C = (x + 3) + "SAF" + (y + 30),
-                D = (x + 4) + "SAF" + (y + 40),
-                E = (x + 5) + "SAF" + (y + 50),
-                F = (x + 6) + "SAF" + (y + 60);
+        Object A = (x + 1) + "_SAF_" + (y + 10),
+                B = (x + 2) + "_SAF_" + (y + 20),
+                C = (x + 3) + "_SAF_" + (y + 30),
+                D = (x + 4) + "_SAF_" + (y + 40),
+                E = (x + 5) + "_SAF_" + (y + 50),
+                F = (x + 6) + "_SAF_" + (y + 60);
         Object[] a = {x, A, B, C, D, E, F};
 
         System.out.println("\n///// TEST 01: Copy Array example /////");
@@ -60,7 +60,7 @@ public class Task02 {
 
         b = copyArray(a, a.length);
         printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-        boolean bol = insert(b, 9, 70, 077%7); // This Should Print: No space Left 
+        boolean bol = insert(b, 7, 70, 077%7); // This Should Print: No space Left 
         System.out.println(bol); // This Should Print: false
         printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
 

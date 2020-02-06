@@ -1,3 +1,6 @@
+//Name: Shafkat Hasan
+//ID: 19101077
+//Lab 03 : Test Circular Array
 package Lab03;
 
 import java.util.Scanner;
@@ -17,7 +20,7 @@ public class Test{
       System.out.println(e); // Invalid offset
     }
     tc.delete(2); // 42 784 9124  
-    tc.insert("99",2); // 42 784 9124 99 
+    tc.insert("99",3); // 42 784 9124 99 
   }
 }
     

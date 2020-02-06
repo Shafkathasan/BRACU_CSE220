@@ -1,3 +1,6 @@
+//Name: Shafkat Hasan
+//ID: 19101077
+//Lab 03 : Test Circular Array
 package Lab03;
 
 public class TestCircularArray {
@@ -115,6 +118,7 @@ public class TestCircularArray {
             cir[(start + i) % cir.length] = cir[(start + i - 1) % cir.length];
         }
         cir[idx] = item;
+        size++;
         display();
     }
 

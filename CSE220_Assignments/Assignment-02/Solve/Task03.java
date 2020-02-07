@@ -15,15 +15,14 @@ public class Task03 {
     public Task03(Object[] arr, int st, int sz) {
         start = st;
         size = sz;
-        cir = arr;
-        //No Need to Convert Arry into Cicruler Array in This Task
-//        for (int i = 0; i < size; i++) {
-//            cir[(start + i) % arr.length] = arr[i];
-//        }
+        cir = new Object[arr.length];
+        for (int i = 0; i < size; i++) {
+            cir[(start + i) % arr.length] = arr[i];
+        }
     }
 
     //Prints from index --> 0 to cir.length-1
-    public void printFullLinear() {
+    public void printFullArray() {
         for (int i = 0; i <= cir.length - 1; i++) {
             if (i == cir.length - 1) {
                 System.out.print(cir[i] + "\n\n");
@@ -72,7 +71,8 @@ public class Task03 {
             T[i] = cir[(start + i) % cir.length];
         }
         for (int i = size; i < T.length; i++) {
-            T[i] = random.nextInt(100); // Generate random integers in range 0 to 99 
+            T[i] = 7;
+            //T[i] = random.nextInt(100); // Generate random integers in range 0 to 99 
         }
         cir = T;
     }

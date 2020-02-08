@@ -9,10 +9,10 @@ public class Task03_Test {
         Object arr [] = {x+50,x+4,null,null,x,x+10,x-10,x-18}; //{94, 48, null, null, 44, 54, 34, 26}
         System.out.println("///// Array /////");
         Task03 c = new Task03(arr, 4, 8);
-        c.printFullArray();
+        c.printFullArray(); //{44, 54, 34, 26, 94, 48, null, null}
         
         System.out.println("///// Forward Print /////");
-        c.printForward();
+        c.printForward(); //{94, 48, null, null, 44, 54, 34, 26}
         
         System.out.println("///// Backward Print /////");
         c.printBackward();
@@ -22,7 +22,7 @@ public class Task03_Test {
         c.printFullArray();
         
         System.out.println("///// Resize /////");
-        c.resize((1077%5)+(1077%3)+8); //(1077%5)+(1077%3)+8 = 10;
+        c.resize((1077%5)+(077%3)+8); //(1077%5)+(077%3)+8 = 10;
         c.printFullArray();
         
         System.out.println("///// Insert-01 /////");

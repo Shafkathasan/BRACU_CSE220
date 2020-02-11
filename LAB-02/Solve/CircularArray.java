@@ -1,5 +1,6 @@
 //Name: Shafkat Hasan
 //ID: 19101077
+//Section: 07
 //Lab 02 : Circular Array
 package Lab02;
 
@@ -128,6 +129,7 @@ public class CircularArray {
                 index = index % cir.length;
             }
         }
+        size--;
     }
 
     /* parameter--> pos. pos --> position relative to start.

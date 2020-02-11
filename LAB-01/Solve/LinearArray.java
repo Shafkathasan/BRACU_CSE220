@@ -1,5 +1,6 @@
 //Name: Shafkat Hasan
 //ID: 19101077
+//Section: 07
 //Lab 01 : Liner Array
 package Lab01;
 
@@ -21,8 +22,8 @@ public class LinearArray {
         printArray(b); // This Should Print: { 60, 50, 40, 30, 20, 10 } 
 
         System.out.println("\n///// TEST 04: Shift Left k cell example /////");
-        b = copyArray(a, a.length);
-        printArray(b);
+        b = copyArray(a, a.length); //Make a Copy of a[]
+        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 } 
         b = shiftLeft(b, 3);
         printArray(b); // This Should Print: { 40, 50, 60, 0, 0, 0 } 
 
@@ -84,7 +85,7 @@ public class LinearArray {
     public static void printArray(int[] source) {
         for (int i = 0; i < source.length; i++) {
             if (i == source.length - 1) {
-                System.out.print(source[i] + "\n");
+                System.out.println(source[i]);
             } else {
                 System.out.print(source[i] + ", ");
             }
@@ -95,7 +96,7 @@ public class LinearArray {
     public static void printReverse(int[] source) {
         for (int i = source.length - 1; i >= 0; i--) {
             if (i == 0) {
-                System.out.print(source[i] + "\n");
+                System.out.println(source[i]);
             } else {
                 System.out.print(source[i] + ", ");
             }
@@ -128,7 +129,7 @@ public class LinearArray {
             source[i] = source[i + k];
             source[i + k] = 0;
         }
-        return source;   
+        return source;
     }
 
     // Shifts all the elements of the source array to the right by 'k' positions
@@ -138,7 +139,7 @@ public class LinearArray {
             source[i + k] = source[i];
             source[i] = 0;
         }
-        return source;    
+        return source;
     }
 
     // Rotates all the elements of the source array to the left by 'k' positions
@@ -149,7 +150,7 @@ public class LinearArray {
             source[i] = source[i + k];
             source[i + k] = T;
         }
-        return source;   
+        return source;
     }
 
     // Rotates all the elements of the source array to the right by 'k' positions
@@ -174,17 +175,24 @@ public class LinearArray {
      * print the 'Number of elements after insertion' is completed
      */
     public static boolean insert(int[] arr, int size, int elem, int index) {
-        if (size <= arr.length) {
-            for (int i = arr.length - 1; i > index; i--) {
+        boolean check = false;
+        
+        if (size > arr.length - 1) {
+            System.out.println("No space Left");
+            return check;
+            
+        } else if (index > arr.length - 1) {
+            System.out.println("Invalid Index");
+            
+        } else if (size < arr.length) {
+            for (int i = arr.length - 1; i >= index; i--) {
                 arr[i] = arr[i - 1];
             }
             arr[index] = elem;
+            check = true;
             System.out.println("Number of elements after insertion: " + (size + 1));
-            return true;
-        } else {
-            System.out.println("No space Left");
-            return false;
         }
+        return check;
     }
 
     /**

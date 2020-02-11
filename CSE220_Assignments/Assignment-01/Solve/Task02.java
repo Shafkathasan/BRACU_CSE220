@@ -1,5 +1,6 @@
 //Name: Shafkat Hasan
 //ID: 19101077
+//Section: 07
 //Assignment-01 : Liner Array
 package Assignment_01;
 
@@ -202,11 +203,9 @@ public class Task02 {
      * print the 'Number of elements after removal' is completed
      */
     public static Object[] removeAt(Object[] arr, int index) {
-        if (arr == null
-                || index < 0
-                || index >= arr.length) {
-
+        if (arr == null || index < 0 || index >= arr.length) {
             return arr;
+            
         } else {
             Object[] anotherArray = new Object[arr.length - 1];
             for (int i = 0, k = 0; i < arr.length; i++) {

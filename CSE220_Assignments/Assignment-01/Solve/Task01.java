@@ -1,5 +1,6 @@
 //Name: Shafkat Hasan
 //ID: 19101077
+//Section: 07
 //Assignment-01 : Liner Array
 package Assignment_01;
 
@@ -9,7 +10,7 @@ public class Task01 {
         int x = (1077 % 33) + (1077 % 34);
         int[] a = {x - 18, x + 4, x, x + 14, x - 5, x + 4, x - 2, x + 9};
         printArray(a);
-        
+
         System.out.println("\n///// TEST 01: Copy Array example /////");
         int[] b = copyArray(a, a.length);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
@@ -91,7 +92,7 @@ public class Task01 {
             }
         }
     }
-    
+
     public static int[] resizeArray(int[] source, int newcapacity) {
         int[] T = new int[newcapacity];
         for (int i = 0; i < source.length; i++) {
@@ -172,17 +173,24 @@ public class Task01 {
      * print the 'Number of elements after insertion' is completed
      */
     public static boolean insert(int[] arr, int size, int elem, int index) {
-        if (size <= arr.length) {
-            for (int i = arr.length - 1; i > index; i--) {
+        boolean check = false;
+
+        if (size > arr.length - 1) {
+            System.out.println("No space Left");
+            return check;
+
+        } else if (index > arr.length - 1) {
+            System.out.println("Invalid Index");
+
+        } else if (size < arr.length) {
+            for (int i = arr.length - 1; i >= index; i--) {
                 arr[i] = arr[i - 1];
             }
             arr[index] = elem;
+            check = true;
             System.out.println("Number of elements after insertion: " + (size + 1));
-            return true;
-        } else {
-            System.out.println("No space Left");
-            return false;
         }
+        return check;
     }
 
     /**
@@ -195,13 +203,11 @@ public class Task01 {
      * print the 'Number of elements after removal' is completed
      */
     public static int[] removeAt(int[] arr, int index) {
-        if (arr == null
-                || index < 0
-                || index >= arr.length) {
-
+        if (arr == null || index < 0 || index >= arr.length) {
             return arr;
+            
         } else {
-            int[] anotherArray = new int[arr.length - 1]; 
+            int[] anotherArray = new int[arr.length - 1];
             for (int i = 0, k = 0; i < arr.length; i++) {
 
                 // if the index is 

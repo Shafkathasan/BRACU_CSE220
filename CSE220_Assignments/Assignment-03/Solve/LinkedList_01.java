@@ -7,17 +7,18 @@ package Assignment_03;
 public class LinkedList_01 {
 
     Node head;
+
     public LinkedList_01(Object[] a) {
 
-        head = new Node(a[0], null);
-        Node now = head; // Create Head for LinkList
+        head = new Node(a[0], null); // Create Head Node for LinkList
+        Node now = head; 
         for (int i = 1; i < a.length; i++) {
-            Node Temp = new Node(a[i], null);
+            Node Temp = new Node(a[i], null); // Create new Node for LinkList
             now.next = Temp; // Take Previouse Node Refarence
             now = now.next;
         }
     }
-    
+
     /* Second Constructor:
      * Sets the value of head. head will refer
      * to the given LinkedList
@@ -26,7 +27,7 @@ public class LinkedList_01 {
         // Set Head
         head = h;
     }
-    
+
     /* prints the elements in the list */
     public void printList() {
         // Start Printing from Head & End if Null
@@ -34,19 +35,19 @@ public class LinkedList_01 {
         for (; now.next != null; now = now.next) {
             System.out.print(now.element + ", ");
         }
-        System.out.println(now.element + ". "+"\n");
+        System.out.println(now.element + ". " + "\n");
     }
-    
+
     /* Counts the number of Nodes in the list */
     public int countNode() {
         // Take a Counter
         int count = 0;
-        for(Node now = head; now != null; now = now.next) {
+        for (Node now = head; now != null; now = now.next) {
             count++;
         }
         return count;
     }
-    
+
     // returns the element of the Node at the given index. For invalid idx return null.
     public Object get(int idx) {
         if (idx < 0 || idx >= countNode()) { // Invalid Range
@@ -58,7 +59,7 @@ public class LinkedList_01 {
         }
         return now.element; // Return Element
     }
-    
+
     /* updates the element of the Node at the given index. 
      * Returns the old element that was replaced. For invalid index return null.
      * parameter: index, new element
@@ -79,7 +80,7 @@ public class LinkedList_01 {
         }
         return null;
     }
-    
+
     // returns the reference of the Node at the given index. For invalid index return null.
     public Node searchNode(int idx) {
         if (idx < 0 || idx >= countNode()) { // Invalid Range
@@ -95,7 +96,7 @@ public class LinkedList_01 {
         }
         return now;
     }
-    
+
     /* inserts Node containing the given element at the given index
      * Check validity of index.
      */
@@ -115,7 +116,7 @@ public class LinkedList_01 {
             }
         }
     }
-    
+
     /* removes Node at the given index. returns element of the removed node.
      * Check validity of index. return null if index is invalid.
      */
@@ -137,25 +138,7 @@ public class LinkedList_01 {
         }
 
     }
-    
-     // Makes a duplicate copy of the given List. Returns the reference of the duplicate list.
-    public Node copyList() {
-        // Take a Copy of Head & Tail
-        Node copyHead = new Node(null, null);
-        Node copyTail = new Node(null, null);
-        for (Node now = head; now != null; now = now.next) {
-            if (copyHead.element == null) {
-                copyHead.element = now.element;
-                copyHead.next = copyTail;
-                copyTail = copyHead;
-            } else {
-                copyTail.next = new Node(now.element, null);
-                copyTail = copyTail.next;
-            }
-        }
-        return copyHead;
-    }
-    
+
     // Makes a reversed copy of the given List. Returns the head reference of the reversed list.
     public Node reverseList() {
         // TO DO
@@ -166,7 +149,7 @@ public class LinkedList_01 {
         }
         return reverseNode; // Return Reverse Node
     }
-    
+
     // Rotates the list to the left by 1 position.
     public void rotateLeft() {
         Node now = head;
@@ -183,7 +166,7 @@ public class LinkedList_01 {
     public void rotateRight() {
         Node now = head;
         Node tail = null;
-        for ( ; now.next != null; now = now.next) {
+        for (; now.next != null; now = now.next) {
             if ((now.next).next == null) {
                 tail = now;
             }

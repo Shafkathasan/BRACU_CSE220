@@ -2,15 +2,15 @@
 //ID: 19101077
 //Section: 07
 //Lab 07 : Lab Mid-Exam
-
 package Lab07_Mid_Exam;
 
 public class Node {
+
     Node next;
     int element;
-    public Node(int e, Node n)
-    {
-        element=e;
-        next=n;
+
+    public Node(int e, Node n) {
+        element = e;
+        next = n;
     }
 }

@@ -1,7 +1,7 @@
 //Name: Shafkat Hasan
 //ID: 19101077
 //Section: 07
-//Lab 01 : Liner Array
+//Lab 01 : Linear Array
 package Lab01;
 
 public class LinearArray {
@@ -114,9 +114,8 @@ public class LinearArray {
 
     // creates a reversed copy of the source array and returns the reference of the newly created reversed array
     public static void reverseArray(int[] source) {
-        int i, T;
-        for (i = 0; i < source.length / 2; i++) {
-            T = source[i];
+        for (int i = 0; i < source.length / 2; i++) {
+            int T = source[i];
             source[i] = source[source.length - 1 - i];
             source[source.length - 1 - i] = T;
         }
@@ -220,6 +219,7 @@ public class LinearArray {
                 if (arr[i] == elem) {
                     for (int j = i; j < arr.length - 1; j++) {
                         arr[j] = arr[j + 1];
+//                        arr[j+1] = 0;
                         size--;
                     }
                 }

@@ -35,4 +35,14 @@ public class MyList {
         }
         System.out.println(now.x + ". ");
     }
+    
+    /* prints the elements in the list */
+    public void printListR() {
+        // Start Printing from Head & End if Null
+        NodeD now = head;
+        for (; now.prev != null; now = now.prev) {
+            System.out.print(now.x + ", ");
+        }
+        System.out.println(now.x + ". ");
+    }
 }

@@ -7,4 +7,5 @@ This are the lab codes for CSE220: DATA STRUCTURES. There are lots of way to Sol
   <li>Linear Array</li>
   <li>Circuler Array</li>
   <li>Linked list (Singly, Doubly, Circular)</li>
+  <li>Read & Write Text File</li>
 </ul>

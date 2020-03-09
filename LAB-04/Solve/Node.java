@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Lab 04 : Linked List
-package Lab04;
+package Lab04; // Remove This Line or Make a package
 
 public class Node {
 

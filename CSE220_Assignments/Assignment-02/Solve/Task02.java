@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Assignment-02 : Circular Array
-package Assignment_02;
+package Assignment_02; // Remove This Line or Make a package
 
 public class Task02 { //One Application of Circular Array and Why?
 
@@ -25,7 +25,7 @@ public class Task02 { //One Application of Circular Array and Why?
         size--;
         printFullArray(cir);
     }
-    
+
     //Prints from index --> 0 to cir.length-1
     public static void printFullArray(Object[] cir) {
         for (int i = 0; i <= cir.length - 1; i++) {
@@ -37,4 +37,3 @@ public class Task02 { //One Application of Circular Array and Why?
         }
     }
 }
-

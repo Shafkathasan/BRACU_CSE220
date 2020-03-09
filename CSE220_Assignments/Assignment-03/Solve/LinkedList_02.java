@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Assignment-03 : Linked List
-package Assignment_03;
+package Assignment_03; // Remove This Line or Make a package
 
 public class LinkedList_02 {
 
@@ -28,33 +28,33 @@ public class LinkedList_02 {
         System.out.println(now.element + ". " + "\n");
     }
 
-    //sortList() will sort NodeNs of the list in ascending order  
-    public void sortList() {  
-        //NodeN current will point to head  
-        NodeN current = head, index = null;  
-        int temp;  
-          
-        if(head == null) {  
-            return;  
-        }  
-        else {  
-            while(current != null) {  
-                //NodeN index will point to NodeN next to current  
-                index = current.next;  
-                  
-                while(index != null) {  
-                    //If current NodeN's data is greater than index's NodeN data, swap the data between them  
-                    if(current.element >index.element) {  
-                        temp = current.element;  
-                        current.element = index.element;  
-                        index.element = temp;  
-                    }  
-                    index = index.next;  
-                }  
-                current = current.next;  
-            }      
-        }  
-    }  
+    //sortList() will sort NodeNs of the list in ascending order
+    public void sortList() {
+        //NodeN current will point to head
+        NodeN current = head, index = null;
+        int temp;
+
+        if(head == null) {
+            return;
+        }
+        else {
+            while(current != null) {
+                //NodeN index will point to NodeN next to current
+                index = current.next;
+
+                while(index != null) {
+                    //If current NodeN's data is greater than index's NodeN data, swap the data between them
+                    if(current.element >index.element) {
+                        temp = current.element;
+                        current.element = index.element;
+                        index.element = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
+    }
 
     public void RemoveDuplicates() {
         NodeN current = head;
@@ -68,5 +68,5 @@ public class LinkedList_02 {
         }
     }
 
-   
+
 }

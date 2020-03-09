@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Assignment-03 : Linked List
-package Assignment_03;
+package Assignment_03; // Remove This Line or Make a package
 
 public class LinkedList_01 {
 
@@ -11,7 +11,7 @@ public class LinkedList_01 {
     public LinkedList_01(Object[] a) {
 
         head = new Node(a[0], null); // Create Head Node for LinkList
-        Node now = head; 
+        Node now = head;
         for (int i = 1; i < a.length; i++) {
             Node Temp = new Node(a[i], null); // Create new Node for LinkList
             now.next = Temp; // Take Previouse Node Refarence
@@ -60,7 +60,7 @@ public class LinkedList_01 {
         return now.element; // Return Element
     }
 
-    /* updates the element of the Node at the given index. 
+    /* updates the element of the Node at the given index.
      * Returns the old element that was replaced. For invalid index return null.
      * parameter: index, new element
      */

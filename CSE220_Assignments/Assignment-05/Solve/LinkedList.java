@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Assignment-05 : Special Assignment for Midterm
-package Assignment_05;
+package Assignment_05; // Remove This Line or Make a package
 
 public class LinkedList {
 
@@ -36,7 +36,7 @@ public class LinkedList {
         }
         return val;
     }
-    
+
     /* prints the elements in the list */
     public void printList() {
         // Start Printing from Head & End if Null

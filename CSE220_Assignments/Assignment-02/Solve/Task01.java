@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Assignment-02 : Circular Array
-package Assignment_02;
+package Assignment_02; // Remove This Line or Make a package
 
 import java.util.Scanner;
 

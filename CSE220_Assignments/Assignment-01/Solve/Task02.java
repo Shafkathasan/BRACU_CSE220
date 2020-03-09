@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Assignment-01 : Liner Array
-package Assignment_01;
+package Assignment_01; // Remove This Line or Make a package
 
 public class Task02 {
 
@@ -19,72 +19,72 @@ public class Task02 {
 
         System.out.println("\n///// TEST 01: Copy Array example /////");
         Object[] b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-        
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }
+
         System.out.println("\n///// TEST 02: Resize Array example /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }
         b = resizeArray(b, (1077 % 5) + (077 % 3)+8);
         printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53, 0, 0 }
 
         System.out.println("\n///// TEST 03: Reverse Array example /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }
         reverseArray(b);
-        printArray(b); // This Should Print: { 53, 42, 48, 39, 58, 44, 48, 26 } 
+        printArray(b); // This Should Print: { 53, 42, 48, 39, 58, 44, 48, 26 }
 
         System.out.println("\n///// TEST 04: Shift Left k cell example /////");
         b = copyArray(a, a.length);
         printArray(b);
         b = shiftLeft(b, 1);
-        printArray(b); // This Should Print: { 58, 39, 48, 42, 53, 0, 0, 0 } 
+        printArray(b); // This Should Print: { 58, 39, 48, 42, 53, 0, 0, 0 }
 
         System.out.println("\n///// TEST 05: Shift Right k cell example /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }
         b = shiftRight(b, 1);
-        printArray(b);  // This Should Print: { 0, 0, 0, 26, 48, 44, 42, 53 } 
+        printArray(b);  // This Should Print: { 0, 0, 0, 26, 48, 44, 42, 53 }
 
         System.out.println("\n///// TEST 06: Rotate Left k cell example /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }
         b = rotateLeft(b, 077%5);
-        printArray(b); // This Should Print: { 39, 48, 42, 53, 26, 48, 44, 58 } 
+        printArray(b); // This Should Print: { 39, 48, 42, 53, 26, 48, 44, 58 }
 
         System.out.println("\n///// TEST 07: Rotate Right k cell example /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }
         b = rotateRight(b, 077%5);
-        printArray(b); // This Should Print: { 39, 48, 42, 53, 26, 48, 44, 58 } 
+        printArray(b); // This Should Print: { 39, 48, 42, 53, 26, 48, 44, 58 }
 
         System.out.println("\n///// TEST 08: Insert example 1 /////");
 
         b = copyArray(a, a.length);
-        printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
-        boolean bol = insert(b, 7, 70, 077%7); // This Should Print: No space Left 
+        printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }
+        boolean bol = insert(b, 7, 70, 077%7); // This Should Print: No space Left
         System.out.println(bol); // This Should Print: false
-        printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
+        printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }
 
         System.out.println("\n///// TEST 09: Insert example 2 /////");
         b = copyArray(a, a.length);
-        printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 } 
+        printArray(b);  // This Should Print: { 26, 48, 44, 58, 39, 48, 42, 53 }
         bol = insert(b, 5, 70, 2);  // This Should Print: Number of elements after insertion: 6
         System.out.println(bol); // This Should Print: true
-        printArray(b); // This Should Print: { 26, 48, 70, 44, 58, 39, 48, 42 } 
+        printArray(b); // This Should Print: { 26, 48, 70, 44, 58, 39, 48, 42 }
 
         System.out.println("\n///// TEST 11: Remove example 1 /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 } 
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 }
         b = removeAt(b, 077%10);
         //System.out.println(bol); // This Should Print: false
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 } 
-        
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 }
+
         System.out.println("\n///// TEST 12: Remove example 2 /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 } 
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 }
         b = removeAt(b, 077%9);
         //System.out.println(bol); // This Should Print: false
-        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 } 
+        printArray(b); // This Should Print: { 26, 48, 44, 58, 39, 48, 70, 42 }
 
     }
 
@@ -205,19 +205,19 @@ public class Task02 {
     public static Object[] removeAt(Object[] arr, int index) {
         if (arr == null || index < 0 || index >= arr.length) {
             return arr;
-            
+
         } else {
             Object[] anotherArray = new Object[arr.length - 1];
             for (int i = 0, k = 0; i < arr.length; i++) {
 
-                // if the index is 
-                // the removal element index 
+                // if the index is
+                // the removal element index
                 if (i == index) {
                     continue;
                 }
 
-                // if the index is not 
-                // the removal element index 
+                // if the index is not
+                // the removal element index
                 anotherArray[k++] = arr[i];
             }
             return anotherArray;

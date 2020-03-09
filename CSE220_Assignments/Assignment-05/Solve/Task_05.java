@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Assignment-05 : Special Assignment for Midterm
-package Assignment_05;
+package Assignment_05; // Remove This Line or Make a package
 
 public class Task_05 {
 
@@ -18,6 +18,6 @@ public class Task_05 {
         m.printList();
         // This should print: 837, 27, 28, 29, 30.
         m.printListR();
-        // This should print: 837, 4, 4, 4, 4. 
+        // This should print: 837, 4, 4, 4, 4.
     }
 }

@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Lab 06 : Read & Write Text File
-package Lab06;
+package Lab06; // Remove This Line or Make a package
 
 import java.io.File;
 import java.io.FileWriter;
@@ -23,7 +23,7 @@ public class FileWrite {
             fw.write(i + "");
         }
         System.out.println("Writing successful");
-        //close the file  
+        //close the file
         fw.close();
     }
 }

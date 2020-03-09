@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Lab 04 : Linked List
-package Lab04;
+package Lab04; // Remove This Line or Make a package
 
 public class LinkedList {
 
@@ -80,7 +80,7 @@ public class LinkedList {
         return now.element; // Return Element
     }
 
-    /* updates the element of the Node at the given index. 
+    /* updates the element of the Node at the given index.
      * Returns the old element that was replaced. For invalid index return null.
      * parameter: index, new element
      */

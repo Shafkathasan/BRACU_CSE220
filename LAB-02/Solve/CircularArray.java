@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Lab 02 : Circular Array
-package Lab02;
+package Lab02; // Remove This Line or Make a package
 
 public class CircularArray {
 
@@ -92,7 +92,7 @@ public class CircularArray {
      * use resizeStartUnchanged() for resizing.
      */
     public void insertByRightShift(Object elem, int pos) {
-        
+
         if (size >= cir.length) {
             resizeStartUnchanged(size + 3);
         }

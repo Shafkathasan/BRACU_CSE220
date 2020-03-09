@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Lab 02 : Circular Array
-package Lab02;
+package Lab02; // Remove This Line or Make a package
 
 public class CircularArrayTester {
 
@@ -60,7 +60,7 @@ public class CircularArrayTester {
         c5.removeByLeftShift(3); //parameter--> pos. pos --> position relative to start.
         // Valid range of pos--> 0 to size-1
 
-        c5.printFullLinear(); // This Should Print: null, null, null, 10, 20, 30, 50.  
+        c5.printFullLinear(); // This Should Print: null, null, null, 10, 20, 30, 50.
 
         System.out.println("\n///// TEST 08 /////");
         //Object [] linear6 = {10, 20, 30, 40, 50, null, null};
@@ -70,8 +70,8 @@ public class CircularArrayTester {
         c6.removeByRightShift(3); //parameter--> pos. pos --> position relative to start.
         // Valid range of pos--> 0 to size-1
 
-        c6.printFullLinear(); // This Should Print: 50, null, null, null, 10, 20, 30.   
-        c6.printForward();   // This Should Print: 10, 20, 30, 50.   
+        c6.printFullLinear(); // This Should Print: 50, null, null, null, 10, 20, 30.
+        c6.printForward();   // This Should Print: 10, 20, 30, 50.
 
         System.out.println("\n///// TEST 09 /////");
         Object[] linear7 = {10, 20, 30, 20, 10, null, null};

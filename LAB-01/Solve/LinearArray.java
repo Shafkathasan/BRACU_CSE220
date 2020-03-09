@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Lab 01 : Linear Array
-package Lab01;
+package Lab01; // Remove This Line or Make a package
 
 public class LinearArray {
 
@@ -11,73 +11,73 @@ public class LinearArray {
 
         System.out.println("\n///// TEST 01: Copy Array example /////");
         int[] b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 } 
+        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 }
 
         System.out.println("\n///// TEST 02: Print Reverse example /////");
-        printArray(a); // This Should Print: { 10, 20, 30, 40, 50, 60 } 
-        printReverse(a); // This Should Print: { 60, 50, 40, 30, 20, 10 } 
+        printArray(a); // This Should Print: { 10, 20, 30, 40, 50, 60 }
+        printReverse(a); // This Should Print: { 60, 50, 40, 30, 20, 10 }
 
         System.out.println("\n///// TEST 03: Reverse Array example /////");
         reverseArray(b);
-        printArray(b); // This Should Print: { 60, 50, 40, 30, 20, 10 } 
+        printArray(b); // This Should Print: { 60, 50, 40, 30, 20, 10 }
 
         System.out.println("\n///// TEST 04: Shift Left k cell example /////");
         b = copyArray(a, a.length); //Make a Copy of a[]
-        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 } 
+        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 }
         b = shiftLeft(b, 3);
-        printArray(b); // This Should Print: { 40, 50, 60, 0, 0, 0 } 
+        printArray(b); // This Should Print: { 40, 50, 60, 0, 0, 0 }
 
         System.out.println("\n///// TEST 05: Rotate Left k cell example /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 } 
+        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 }
         b = rotateLeft(b, 3);
-        printArray(b); // This Should Print: { 40, 50, 60, 10, 20, 30 } 
+        printArray(b); // This Should Print: { 40, 50, 60, 10, 20, 30 }
 
         System.out.println("\n///// TEST 06: Shift Right k cell example /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 } 
+        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 }
         b = shiftRight(b, 3);
-        printArray(b);  // This Should Print: { 0, 0, 0, 10, 20, 30 } 
+        printArray(b);  // This Should Print: { 0, 0, 0, 10, 20, 30 }
 
         System.out.println("\n///// TEST 07: Rotate Right k cell example /////");
         b = copyArray(a, a.length);
-        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 } 
+        printArray(b); // This Should Print: { 10, 20, 30, 40, 50, 60 }
         b = rotateRight(b, 3);
-        printArray(b); // This Should Print: { 40, 50, 60, 10, 20, 30 } 
+        printArray(b); // This Should Print: { 40, 50, 60, 10, 20, 30 }
 
         System.out.println("\n///// TEST 08: Insert example 1 /////");
 
         b = copyArray(a, a.length);
-        printArray(b);  // This Should Print: { 10, 20, 30, 40, 50, 60 } 
-        boolean bol = insert(b, 6, 70, 2); // This Should Print: No space Left 
+        printArray(b);  // This Should Print: { 10, 20, 30, 40, 50, 60 }
+        boolean bol = insert(b, 6, 70, 2); // This Should Print: No space Left
         System.out.println(bol); // This Should Print: false
-        printArray(b);  // This Should Print: { 10, 20, 30, 40, 50, 60 } 
+        printArray(b);  // This Should Print: { 10, 20, 30, 40, 50, 60 }
 
         System.out.println("\n///// TEST 09: Insert example 2 /////");
         int[] c = {10, 20, 30, 40, 50, 0, 0};
         printArray(c);  // This Should Print: { 10, 20, 30, 40, 50, 0, 0 }
         bol = insert(c, 5, 70, 2);  // This Should Print: Number of elements after insertion: 6
         System.out.println(bol); // This Should Print: true
-        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 0 } 
+        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 0 }
 
         System.out.println("\n///// TEST 10: Insert example 3 /////");
-        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 0 } 
-        bol = insert(c, 6, 70, 6); // This Should Print: Number of elements after insertion: 7 
+        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 0 }
+        bol = insert(c, 6, 70, 6); // This Should Print: Number of elements after insertion: 7
         System.out.println(bol); // This Should Print: true
-        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 70 } 
+        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 70 }
 
         System.out.println("\n///// TEST 11: Remove example 1 /////");
 
-        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 70 } 
+        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 70 }
         bol = removeAll(c, 7, 90);
         System.out.println(bol); // This Should Print: false
-        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 70 } 
+        printArray(c); // This Should Print: { 10, 20, 70, 30, 40, 50, 70 }
 
         System.out.println("\n///// TEST 12: Remove example 2 /////");
-        printArray(c);  // This Should Print: { 10, 20, 70, 30, 40, 50, 70 } 
+        printArray(c);  // This Should Print: { 10, 20, 70, 30, 40, 50, 70 }
         bol = removeAll(c, 7, 70);
         System.out.println(bol); // This Should Print: true
-        printArray(c);  // This Should Print: { 10, 20, 30, 40, 50, 0, 0 } 
+        printArray(c);  // This Should Print: { 10, 20, 30, 40, 50, 0, 0 }
 
     }
 
@@ -175,14 +175,14 @@ public class LinearArray {
      */
     public static boolean insert(int[] arr, int size, int elem, int index) {
         boolean check = false;
-        
+
         if (size > arr.length - 1) {
             System.out.println("No space Left");
             return check;
-            
+
         } else if (index > arr.length - 1) {
             System.out.println("Invalid Index");
-            
+
         } else if (size < arr.length) {
             for (int i = arr.length - 1; i >= index; i--) {
                 arr[i] = arr[i - 1];

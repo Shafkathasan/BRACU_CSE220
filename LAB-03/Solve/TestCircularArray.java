@@ -2,7 +2,7 @@
 //ID: 19101077
 //Section: 07
 //Lab 03 : Test Circular Array
-package Lab03;
+package Lab03; // Remove This Line or Make a package
 
 public class TestCircularArray {
 
@@ -46,9 +46,9 @@ public class TestCircularArray {
 
     public int countOdd() {
         /* From the cir array, you have to count the number of odd numbers.
-     * It is not as easy as it looks. Firstly, notice that the numbers are given as strings. 
-     * To determine whether a number is odd,you first have to sum up the digits. 
-     * For example if one number is "234", you have to find the result of 2+3+4. 
+     * It is not as easy as it looks. Firstly, notice that the numbers are given as strings.
+     * To determine whether a number is odd,you first have to sum up the digits.
+     * For example if one number is "234", you have to find the result of 2+3+4.
      * If the summation is odd then consider the number as odd.
      * Then return the count.
          */
@@ -70,9 +70,9 @@ public class TestCircularArray {
 
     public int countEven() {
         /* From the cir array, you have to count the number of even numbers.
-     * It is not as easy as it looks. Firstly, notice that the numbers are given as strings. 
-     * To determine whether a number is even, you first have to sum up the digits. 
-     * For example if one number is "234", you have to find the result of 2+3+4. 
+     * It is not as easy as it looks. Firstly, notice that the numbers are given as strings.
+     * To determine whether a number is even, you first have to sum up the digits.
+     * For example if one number is "234", you have to find the result of 2+3+4.
      * If the summation is even then consider the number as even.
      * Then return the count.
          */
@@ -97,7 +97,7 @@ public class TestCircularArray {
      * This class must be created
      * you must createhe CircularArrayException object send the name of the particular exception as String in the constructor
      * one of them is done for you
-     * 
+     *
      * If there is/are empty space(s), insert using LEFT shift.
      * Offset means how far from start. The index has been calculated for you.
      * Offset cannot be more than size
@@ -128,7 +128,7 @@ public class TestCircularArray {
      * This class must be created
      * you must send the name of the particular exception as String in the constructor
      * shown in insert()
-     * 
+     *
      * Delete using right shift.
      * Note that the element pointed by start will also shift, hence change the start at the end
      * decrement size

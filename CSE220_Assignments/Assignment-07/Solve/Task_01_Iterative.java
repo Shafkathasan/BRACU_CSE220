@@ -29,7 +29,7 @@ public class Task_01_Iterative {
             }
         }
 
-        // if we reach here, then element was not present
+        // If element was not present
         return -1;
     }
 
